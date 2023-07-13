@@ -1,3 +1,4 @@
+//List of variables that will be used in functions
 var startButton = document.getElementById("start");
 var timerEl = document.getElementById("timer");
 startButton.addEventListener("click", countdown);
@@ -35,6 +36,7 @@ function countdown() {
       displayMessage();
     }
   }, 1000);
+  // Function will create the first question and answers
   function question1() {
     question.textContent = "What is Wisconsin's state capitol?";
     answer1.textContent = "Madison";
@@ -46,6 +48,7 @@ function countdown() {
     answer4.textContent = "La Crosse";
     answer4.style.display = "block";
     answer1.addEventListener("click", function () {
+      //This will alert if the answer for question 1 is correct or incorrect
       if (currentQuestion === 1) {
         alert("Correct!");
       };
@@ -60,6 +63,7 @@ function countdown() {
       nextQuestion(currentQuestion);
     });
     answer2.addEventListener("click", function () {
+      //This will alert if the answer for question 2 is correct or incorrect
       if (currentQuestion === 1) {
         alert("Incorrect!");
       };
@@ -74,6 +78,7 @@ function countdown() {
       nextQuestion(currentQuestion);
     });
     answer3.addEventListener("click", function () {
+      //This will alert if the answer for question 3 is correct or incorrect
       if (currentQuestion === 1) {
         alert("Incorrect!");
       };
@@ -88,6 +93,7 @@ function countdown() {
       nextQuestion(currentQuestion);
     });
     answer4.addEventListener("click", function () { 
+      //This will alert if the answer for question 4 is correct or incorrect
       if (currentQuestion === 1) {
         alert("Incorrect!");
       }
@@ -102,6 +108,7 @@ function countdown() {
       nextQuestion(currentQuestion);
     });
   };
+  // Function will create the second question and answers
   function question2() {
     question.textContent = "What is Wisconsin's state bird?";
     answer1.textContent = "Cardinal";
@@ -113,18 +120,8 @@ function countdown() {
     answer4.textContent = "Blue Jay";
     answer4.style.display = "block";
   }
+  // Function will create the third question and answers
   function question3() {
-    question.textContent = "What is Wisconsin's state flower?";
-    answer1.textContent = "Rose";
-    answer1.style.display = "block";
-    answer2.textContent = "Daisy";
-    answer2.style.display = "block";
-    answer3.textContent = "Tulip";
-    answer3.style.display = "block";
-    answer4.textContent = "Violet";
-    answer4.style.display = "block";
-  };
-  function question4() {
     question.textContent = "What is Wisconsin's state flower?";
     answer1.textContent = "Rose";
     answer1.style.display = "block";
@@ -153,6 +150,7 @@ function countdown() {
       endQuiz();
     }
   };
+  // Function will end the quiz and display box to submit initials
   function endQuiz() {
     timerEl.textContent = "";
     question.textContent = "End of quiz!";
